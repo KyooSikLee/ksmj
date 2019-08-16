@@ -15,6 +15,7 @@
 
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
+    <%= link_to "KSMJ", "", id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Pictures", '#' %></li>
@@ -25,6 +26,9 @@
 </header>
 
 <div class="container">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
   <%= yield %>
   <%= render 'layouts/footer' %>
 </div>
