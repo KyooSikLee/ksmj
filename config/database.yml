@@ -82,4 +82,5 @@ production:
   <<: *default
   database: ksmj_production
   username: ksmj
-  password: <%= ENV['KSMJ_DATABASE_PASSWORD'] %>
+  password: 960110
+#  password: <%= ENV['KSMJ_DATABASE_PASSWORD'] %>
